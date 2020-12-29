@@ -1,0 +1,84 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#game-container {
+  background-position: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gameBg {
+  margin-left: auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  z-index: -1;
+}
+
+/* SIDEBARS START */
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  #left_sidebar {
+    margin-left: -250px;
+  }
+  #left_sidebar.active {
+    margin-left: 0;
+  }
+  #right_sidebar {
+    margin-left: -250px;
+  }
+  #right_sidebar.active {
+    margin-left: 0;
+  }
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.dropdown-toggle_1::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.panel-toggle-button {
+  opacity: 0.1;
+}
+.panel-toggle-button:hover {
+  opacity: 1;
+}
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+/* SIDEBARS END */
+
+#loader {
+  visibility: hidden;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

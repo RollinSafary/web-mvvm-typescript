@@ -1,0 +1,81 @@
+{
+  "name": "web-mvvm-typescript",
+  "author": "Candy Wings <info@candywings.com>",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web project template based on MVVM architecture in TypeScript!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RollinSafary/web-mvvm-typescript.git"
+  },
+  "issues": {
+    "url": "https://github.com/RollinSafary/web-mvvm-typescript/issues"
+  },
+  "engines": {
+    "node": ">=8.11.2",
+    "npm": ">=6.2.0"
+  },
+  "scripts": {
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "build": "webpack --config config/webpack.config.js --env production --mode production --progress --colors",
+    "stats": "webpack --config config/webpack.config.js --env production --mode production --profile --json > stats.json",
+    "start": "webpack-dev-server --config config/webpack.config.js --mode development --host localhost --https",
+    "dev": "npm run build-assets && npm run start",
+    "assets": "node ./scripts/generateAssetsClass.js",
+    "translations": "node ./scripts/generateTranslationKeysEnum",
+    "build-quick": "webpack --config config/webpack.config.js --env production --mode development --progress --colors",
+    "serve": "npm run build && serve -p 3000 -s www"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.0.1",
+    "@types/crypto-js": "^3.1.43",
+    "@types/jquery": "^3.3.30",
+    "@types/node": "^10.12.10",
+    "@types/popper.js": "^1.11.0",
+    "@types/store": "^2.0.2",
+    "babel-polyfill": "^6.26.0",
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "crypto-js": "^3.1.9-1",
+    "css-loader": "^5.0.1",
+    "directory-tree": "^2.1.1",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "expose-loader": "^0.7.5",
+    "git-revision-webpack-plugin": "^3.0.3",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.15.2",
+    "readdirp": "^2.2.1",
+    "serve": "^10.1.1",
+    "shelljs": "^0.8.3",
+    "stdout": "0.0.3",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^1.3.0",
+    "ts-loader": "^5.3.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.1.6",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webfontloader": "^1.6.28",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.1.4",
+    "xml2js": "^0.4.19"
+  },
+  "dependencies": {
+    "@rollinsafary/mvvm": "0.0.1",
+    "bootstrap": "^4.5.3",
+    "firebase": "^6.2.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "store": "^2.0.12"
+  }
+}
